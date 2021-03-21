@@ -5,7 +5,6 @@
 
 class FakeDoor : public IDoor {
  public:
-
   FakeDoor() : IDoor(FAKE_DOOR_ID) {}
 
   void Render() const override {

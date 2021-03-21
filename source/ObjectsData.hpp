@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cinttypes>
+
 #include "draw.h"
 
 const uint32_t TRAP_CHEST_ID = 1;

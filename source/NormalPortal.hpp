@@ -5,7 +5,6 @@
 
 class NormalPortal : public IPortal {
  public:
-
   NormalPortal() : IPortal(NORMAL_PORTAL_ID) {}
 
   void Render() const override {

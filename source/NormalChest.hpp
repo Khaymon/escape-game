@@ -5,7 +5,6 @@
 
 class NormalChest : public IChest {
  public:
-
   NormalChest() : IChest(NORMAL_CHEST_ID) {}
 
   void Render() const override {

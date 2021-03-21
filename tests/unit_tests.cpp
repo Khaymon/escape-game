@@ -1,22 +1,22 @@
-#include <source/IAbstractFactory.hpp>
-#include <source/ConcreteFactoryFake.hpp>
-#include <source/ConcreteFactoryTrap.hpp>
-#include <source/ConcreteFactoryNormal.hpp>
-#include <source/ObjectsData.hpp>
-
 #include <gtest/gtest.h>
 
-IChest* CreateChest(IAbstractFactory *factory) {
+#include <source/ConcreteFactoryFake.hpp>
+#include <source/ConcreteFactoryNormal.hpp>
+#include <source/ConcreteFactoryTrap.hpp>
+#include <source/IAbstractFactory.hpp>
+#include <source/ObjectsData.hpp>
+
+IChest *CreateChest(IAbstractFactory *factory) {
   IChest *chest = factory->CreateChest();
   return chest;
 }
 
-IDoor* CreateDoor(IAbstractFactory *factory) {
+IDoor *CreateDoor(IAbstractFactory *factory) {
   IDoor *door = factory->CreateDoor();
   return door;
 }
 
-IPortal* CreatePortal(IAbstractFactory *factory) {
+IPortal *CreatePortal(IAbstractFactory *factory) {
   IPortal *portal = factory->CreatePortal();
   return portal;
 }

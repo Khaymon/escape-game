@@ -5,7 +5,7 @@
 
 class FakePortal : public IPortal {
  public:
-  FakePortal() : IPortal (FAKE_PORTAL_ID) {}
+  FakePortal() : IPortal(FAKE_PORTAL_ID) {}
 
   void Render() const override {
     // TODO: Implement

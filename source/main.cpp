@@ -1,10 +1,9 @@
-#include "draw.h"
-#include "IAbstractFactory.hpp"
+#include <iostream>
+
 #include "ConcreteFactoryFake.hpp"
 #include "ConcreteFactoryNormal.hpp"
 #include "ConcreteFactoryTrap.hpp"
+#include "IAbstractFactory.hpp"
+#include "draw.h"
 
-#include <iostream>
-
-int main() {
-}
+int main() {}

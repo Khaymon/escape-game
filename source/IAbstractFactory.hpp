@@ -1,8 +1,8 @@
 #pragma once
 
+#include "IChest.hpp"
 #include "IDoor.hpp"
 #include "IPortal.hpp"
-#include "IChest.hpp"
 
 class IAbstractFactory {
  public:
