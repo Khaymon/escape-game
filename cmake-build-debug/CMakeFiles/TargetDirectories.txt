@@ -1,0 +1,5 @@
+/home/khaymon/escape_game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/khaymon/escape_game/cmake-build-debug/CMakeFiles/room_escape.dir
+/home/khaymon/escape_game/cmake-build-debug/CMakeFiles/test.dir
+/home/khaymon/escape_game/cmake-build-debug/CMakeFiles/UnitTests.dir
+/home/khaymon/escape_game/cmake-build-debug/CMakeFiles/edit_cache.dir

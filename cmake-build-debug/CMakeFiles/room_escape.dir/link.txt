@@ -1,0 +1,1 @@
+/usr/bin/clang++  -g   CMakeFiles/room_escape.dir/src/main.cpp.o  -o bin/room_escape 
