@@ -1,0 +1,22 @@
+{
+  "size": {"x": 0, "y": 0},
+  "walls": [],
+  "normal": {
+    "door": [],
+    "chest": [],
+    "portal": []
+  },
+  "fake": {
+    "door": [],
+    "chest": [],
+    "portal": []
+  },
+  "trap": {
+    "door": [],
+    "chest": [],
+    "portal": []
+  },
+
+  "start": {"x": 0, "y": 0},
+  "exit": {"x": 0, "y": 0}
+}
