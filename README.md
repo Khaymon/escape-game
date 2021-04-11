@@ -109,3 +109,6 @@ $ tree
 └── third_party
     └── CMakeLists.txt
 ```
+## Зависимости
+* [Google Test](https://github.com/google/googletest/) - тесты
+* [JSON for modern C++](https://github.com/google/googletest/) - парсер json
