@@ -7,7 +7,7 @@
 
 
 ## Диаграмма классов
-![alt text](https://github.com/Khaymon/escape_game/blob/checkpoint_1/class_diagram.jpg)
+![alt text](https://github.com/Khaymon/escape_game/blob/checkpoint_2/class_diagram.jpg)
 
 ## Сборка проекта
 ```
