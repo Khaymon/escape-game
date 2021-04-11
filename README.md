@@ -26,32 +26,86 @@ make install
 ```
 $ tree
 .
+├── bin
+│   ├── room_escape
+│   └── Tests
 ├── class_diagram.jpg
 ├── CMakeLists.txt
+├── configure.h.in
+├── gameplay.gif
 ├── include
-│   ├── ConcreteFactoryFake.hpp
-│   ├── ConcreteFactoryNormal.hpp
-│   ├── ConcreteFactoryTrap.hpp
-│   ├── draw.h
-│   ├── FakeChest.hpp
-│   ├── FakeDoor.hpp
-│   ├── FakePortal.hpp
-│   ├── IAbstractFactory.hpp
-│   ├── IChest.hpp
-│   ├── IDoor.hpp
-│   ├── IPortal.hpp
-│   ├── NormalChest.hpp
-│   ├── NormalDoor.hpp
-│   ├── NormalPortal.hpp
-│   ├── ObjectsData.hpp
-│   ├── TrapChest.hpp
-│   ├── TrapDoor.hpp
-│   └── TrapPortal.hpp
+│   ├── configure.h
+│   ├── CoordinatesAdapter.hpp
+│   ├── Coordinates.hpp
+│   ├── Drawer.hpp
+│   ├── draw.h
+│   ├── factory
+│   │   ├── ConcreteFactoryFake.hpp
+│   │   ├── ConcreteFactoryNormal.hpp
+│   │   ├── ConcreteFactoryTrap.hpp
+│   │   └── IAbstractFactory.hpp
+│   ├── Game.hpp
+│   ├── Level.hpp
+│   ├── objects
+│   │   ├── FakeChest.hpp
+│   │   ├── FakeDoor.hpp
+│   │   ├── FakePortal.hpp
+│   │   ├── IChest.hpp
+│   │   ├── IDoor.hpp
+│   │   ├── IObject.hpp
+│   │   ├── IPortal.hpp
+│   │   ├── NormalChest.hpp
+│   │   ├── NormalDoor.hpp
+│   │   ├── NormalPortal.hpp
+│   │   ├── ObjectsData.hpp
+│   │   ├── PlayerCharacter.hpp
+│   │   ├── TrapChest.hpp
+│   │   ├── TrapDoor.hpp
+│   │   ├── TrapPortal.hpp
+│   │   └── Wall.hpp
+│   ├── Player.hpp
+│   └── Tester.hpp
+├── levels
+│   ├── all.json
+│   ├── intro.json
+│   └── template.json
+├── lib
+│   └── liblibs.so
 ├── lint.sh
+├── main.cpp
 ├── README.md
 ├── src
-│   └── main.cpp
-└── tests
-    ├── tests.cpp
-    └── unit_tests.cpp
+│   ├── CMakeLists.txt
+│   ├── Coordinates.cpp
+│   ├── factory
+│   │   ├── ConcreteFactoryFake.cpp
+│   │   ├── ConcreteFactoryNormal.cpp
+│   │   └── ConcreteFactoryTrap.cpp
+│   ├── Game.cpp
+│   ├── Level.cpp
+│   ├── objects
+│   │   ├── FakeChest.cpp
+│   │   ├── FakeDoor.cpp
+│   │   ├── FakePortal.cpp
+│   │   ├── IChest.cpp
+│   │   ├── IDoor.cpp
+│   │   ├── IObject.cpp
+│   │   ├── IPortal.cpp
+│   │   ├── NormalChest.cpp
+│   │   ├── NormalDoor.cpp
+│   │   ├── NormalPortal.cpp
+│   │   ├── PlayerCharacter.cpp
+│   │   ├── TrapChest.cpp
+│   │   ├── TrapDoor.cpp
+│   │   ├── TrapPortal.cpp
+│   │   └── Wall.cpp
+│   └── Player.cpp
+├── tests
+│   ├── factory
+│   │   └── factory_tests.cpp
+│   ├── levels
+│   │   └── levels_tests.cpp
+│   └── tests.cpp
+└── third_party
+    └── CMakeLists.txt
 ```
