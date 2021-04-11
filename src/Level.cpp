@@ -1,12 +1,14 @@
-#include <fstream>
 #include <include/CoordinatesAdapter.hpp>
 #include <include/Level.hpp>
 #include <include/factory/ConcreteFactoryFake.hpp>
 #include <include/factory/ConcreteFactoryNormal.hpp>
 #include <include/factory/ConcreteFactoryTrap.hpp>
 #include <include/objects/Wall.hpp>
-#include <iostream>
+#include <include/configure.h>
 #include <nlohmann/json.hpp>
+
+#include <fstream>
+#include <iostream>
 
 Level::Level(uint32_t level_number) : level_number_(level_number) {
   LoadLevel();
@@ -15,14 +17,14 @@ Level::Level(uint32_t level_number) : level_number_(level_number) {
 Level::Level(const nlohmann::json& level_data) { InitializeLevel(level_data); }
 
 void Level::LoadLevel() {
-  std::ifstream input_file("../levels/all.json");
+  std::string all_levels_path(INSTALL_PATH + std::string("/levels/all.json"));
+  std::ifstream input_file(all_levels_path);
   nlohmann::json all_levels_data;
 
   input_file >> all_levels_data;
   input_file.close();
 
-  std::string path_to_level =
-      "../levels/" + all_levels_data[0].get<std::string>();
+  std::string path_to_level(INSTALL_PATH + std::string("/levels/" + all_levels_data[0].get<std::string>()));
   std::cout << path_to_level << std::endl;
   input_file.open(path_to_level);
   std::ifstream level_file(path_to_level);

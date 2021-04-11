@@ -1,8 +1,9 @@
-# Directories
+# Additional
 build
 .vscode
 .idea
 cmake-build-debug
+include/configure.h
 
 # Prerequisites
 *.d

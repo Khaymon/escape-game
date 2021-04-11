@@ -30,7 +30,7 @@ const char WALL_CHAR = '#';
 
 ///////////////////////////////////////////////////////////////////////////////
 
-const uint32_t PLAYER_COLOR = DARKGREY;
+const uint32_t PLAYER_COLOR = RED;
 const uint32_t DOOR_COLOR = BROWN;
 const uint32_t PORTAL_COLOR = MAGENTA;
 const uint32_t CHEST_COLOR = GREEN;
