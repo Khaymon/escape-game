@@ -1,7 +1,7 @@
 #include <include/objects/IObject.hpp>
 
-IObject::IObject(const uint32_t object_id, Coordinates&& coordinates,
-                 char sprite, uint32_t color)
+IObject::IObject(const uint32_t object_id, const Coordinates coordinates,
+                 const char sprite, const uint32_t color)
     : id_(object_id),
       coordinates_(coordinates),
       sprite_(sprite),
@@ -17,4 +17,8 @@ Coordinates IObject::GetCoordinates() const { return coordinates_; }
 
 void IObject::SetCoordinates(const Coordinates coordinates) {
   coordinates_ = coordinates;
+}
+
+bool IObject::operator<(const IObject& another) const {
+  return GetCoordinates() < another.GetCoordinates();
 }

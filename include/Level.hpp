@@ -5,9 +5,9 @@
 #include <include/factory/IAbstractFactory.hpp>
 #include <include/objects/IObject.hpp>
 #include <include/objects/PlayerCharacter.hpp>
+#include <map>
 #include <nlohmann/json.hpp>
 #include <string>
-#include <vector>
 
 class LevelTester;
 
@@ -32,6 +32,10 @@ class Level {
 
   void InitializeLevel(const nlohmann::json& /*level_data*/);
 
+  void LoadObjectsFromKey(const nlohmann::json& /*objects*/,
+                          const std::string& /*key*/,
+                          IAbstractFactory* /*factory*/);
+
   void InitializeObjects(const nlohmann::json& /*objects*/,
                          IAbstractFactory* /*factory*/);
 
@@ -43,7 +47,7 @@ class Level {
   friend LevelTester;
   // size of the map (x - width, y - height)
   Coordinates size_;
-  std::vector<IObject*> objects_;
+  std::map<Coordinates, IObject*> objects_;
   PlayerCharacter player_charecter_;
   uint32_t level_number_;
 };
@@ -52,7 +56,7 @@ class LevelTester {
  public:
   LevelTester(const nlohmann::json& /*level_data*/);
 
-  const std::vector<IObject*>& GetObjects() const;
+  const std::map<Coordinates, IObject*>& GetObjects() const;
 
   Level level;
 };

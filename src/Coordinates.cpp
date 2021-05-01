@@ -20,6 +20,10 @@ bool Coordinates::operator==(const Coordinates& coordinates) const {
   return (x == coordinates.x) && (y == coordinates.y);
 }
 
+bool Coordinates::operator<(const Coordinates coordinates) const {
+  return (x < coordinates.x) || (x == coordinates.x && y < coordinates.y);
+}
+
 Coordinates Coordinates::operator+(const Coordinates& coordinates) const {
   return Coordinates(x + coordinates.x, y + coordinates.y);
 }

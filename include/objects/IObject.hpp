@@ -6,10 +6,10 @@
 
 class IObject {
  public:
-  IObject(const uint32_t /*object_id*/, Coordinates&& /*coordinates*/,
+  IObject(const uint32_t /*object_id*/, const Coordinates /*coordinates*/,
           char /*sprite*/, uint32_t /*color*/);
 
-  virtual void Interract(PlayerCharacter& player) const = 0;
+  virtual void Interract(PlayerCharacter& /*player*/) const = 0;
 
   const uint32_t GetId() const;
 
@@ -19,7 +19,9 @@ class IObject {
 
   Coordinates GetCoordinates() const;
 
-  void SetCoordinates(const Coordinates coordinates);
+  void SetCoordinates(const Coordinates /*coordinates*/);
+
+  bool operator<(const IObject& /*another*/) const;
 
  private:
   const char sprite_;

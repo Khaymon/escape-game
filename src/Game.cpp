@@ -6,20 +6,9 @@
 #include <include/Game.hpp>
 #include <iostream>
 
-Game::Game() : current_level_(1) {
-  Drawer::Initialize(current_level_.GetMapSize());
-  Initialize();
-}
+Game::Game() : current_level_(1) { Drawer::Initialize(); }
 
 void Game::Start() { GameLoop(); }
-
-void Game::Initialize() {
-  if (WEXITSTATUS(system("stty cbreak -echo stop u")) ||
-      WEXITSTATUS(system("stty raw"))) {
-    fprintf(stderr, "Failed setting up the screen, is 'stty' missing?\n");
-    return exit(1);
-  }
-}
 
 void Game::GameLoop() {
   int key_pressed = 0;

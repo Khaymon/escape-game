@@ -15,8 +15,6 @@ class Game {
   friend class Tester;
 
  private:
-  void Initialize();
-
   void GameLoop();
 
   void Render();

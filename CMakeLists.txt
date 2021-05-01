@@ -23,6 +23,11 @@ set(SOURCES main.cpp)
 add_executable(room_escape ${SOURCES})
 target_link_libraries(room_escape libs)
 
+add_executable(level_builder src/level_builder.cpp)
+target_link_libraries(level_builder libs)
+
+target_compile_options(level_builder PUBLIC "-g")
+
 install (
   DIRECTORY ${CMAKE_SOURCE_DIR}/levels
   DESTINATION ${CMAKE_INSTALL_PREFIX}

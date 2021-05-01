@@ -11,6 +11,8 @@ struct Coordinates {
 
   bool operator==(const Coordinates& /*coordinates*/) const;
 
+  bool operator<(const Coordinates coordinates) const;
+
   Coordinates operator+(const Coordinates& /*coordinates*/) const;
 
   int x;

@@ -105,7 +105,7 @@ TEST(LevelTests, AllChests) {
   LevelTester level_tester(level_data);
 
   for (auto& object: level_tester.GetObjects()) {
-    ASSERT_EQ(object->GetId(), NORMAL_CHEST_ID);
+    ASSERT_EQ(object.second->GetId(), NORMAL_CHEST_ID);
   }
 }
 
@@ -140,7 +140,7 @@ TEST(LevelTests, AllDoors) {
   LevelTester level_tester(level_data);
 
   for (auto& object: level_tester.GetObjects()) {
-    ASSERT_EQ(object->GetId(), NORMAL_DOOR_ID);
+    ASSERT_EQ(object.second->GetId(), NORMAL_DOOR_ID);
   }
 }
 
@@ -175,6 +175,6 @@ TEST(LevelTests, AllPortals) {
   LevelTester level_tester(level_data);
 
   for (auto& object: level_tester.GetObjects()) {
-    ASSERT_EQ(object->GetId(), NORMAL_PORTAL_ID);
+    ASSERT_EQ(object.second->GetId(), NORMAL_PORTAL_ID);
   }
 }

@@ -1,12 +1,11 @@
 #pragma once
 
-#include <include/Coordinates.hpp>
 #include <include/objects/IObject.hpp>
 
-class Wall : public IObject {
+// Class for editing levels
+class PositionPointer : public IObject {
  public:
-  Wall();
-  Wall(const Coordinates coordinates);
+  PositionPointer(const Coordinates /*coordinates*/);
 
   void Interract(PlayerCharacter& /*player*/) const override;
 };
